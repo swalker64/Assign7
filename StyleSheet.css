@@ -1,0 +1,181 @@
+﻿/* LAYOUT */
+
+body {
+    background: url("img/treetop.jpg") no-repeat center;
+}
+
+.container {
+	background: linear-gradient(to bottom, khaki 80%, rgba(255, 255, 255, 0.00));
+    opacity: .95;
+	margin: 0 auto 10px auto;
+	width: 95%;  /* Maximizes the area, still keeping it mostly responsive */
+	max-width: 95%;  /* to address not allowing other browsers to stretch it too far */
+}
+
+
+article {
+	background: linear-gradient(to bottom, chocolate 80%, rgba(255, 255, 255, 0.00));;
+	float: left;
+	width: 73%;
+    padding: 1%;
+}
+
+aside {
+	float: right;
+    color: #e44702;
+	width: 23%;	
+    padding: 1%;
+    margin-top: -50px;
+    padding-top: 50px;
+}
+
+header {
+    position: relative;
+}
+
+header h1,
+header h2 {
+    text-align: center;
+    font-family: 'Lucida Calligraphy';        
+    text-shadow: -4px -1px 6px orange;
+}
+
+header h1 {
+    margin-top: 0;
+    padding-top: 0;
+    color: #e44702;
+}
+
+header h2 {
+    padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: forestgreen;
+}
+
+footer {
+	background: linear-gradient(to top, khaki 80%, rgba(255, 255, 255, 0.00));
+    color: chocolate;
+	clear: both;    
+    text-align: center;
+	width: 100%;
+    height: 40px;
+}
+
+footer p {
+    padding: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    font-size: .5em;
+}
+
+/* NAVIGATION */
+
+nav {
+	background: linear-gradient(to top, chocolate 80%, rgba(255, 255, 255, 0.00));
+	width: 100%;
+    height: 40px;
+    text-align: center;
+}
+
+nav a {
+	color: forestgreen;
+    background: khaki;
+	font-size: 1.25em;
+	text-decoration: none;
+    text-align: center;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/* TYPOGRAPHY */
+
+h1 {
+	font-size: 3em; /* 48px ÷ 16px = 3em */
+}
+
+h2 {
+	font-size: 2.25em; /* 36px ÷ 16px = 2.25em */
+    font-family: 'Lucida Calligraphy'; 
+}
+
+h3 {
+	font-size: 1.5em; /* 24px ÷ 16px = 1.5em */
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 1em; 
+}
+
+p {
+	font-size: 1.2em; /* 20px ÷ 16px = 1.25em */
+	line-height: 1.2em;	
+}
+
+footer a {
+	font-size: 1em; /* 20px used in p, divided by 20px = 1em */	
+}
+
+li {
+	display: inline;
+	padding: 20px;
+	list-style: none;
+}
+
+/* BODY IMAGES */
+h3 + img {
+    float: left;
+    height: 100px;
+    width: 100px;
+    border: solid black 3px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+header img {
+    position: absolute;
+    float: left;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 125%;
+    opacity: .5;
+}
+
+/* FLUID GRIDS */
+
+@media screen and ( max-width: 1020px ) /* Such as for a desktop */{
+	
+	body {
+		background: red;	
+	}
+ 
+} 
+
+@media screen and ( max-width: 768px ) /* Such as for a tablet */{
+	
+	body {
+		background: green;	
+	}
+ 
+} 
+
+@media screen and ( max-width: 480px ) /* Such as for a phone */{
+	
+	body {
+		background: blue;	
+	}
+	
+	aside /* Additional coding to remove floats for this narrow viewport*/{
+		float: none;
+		width: 100%;
+	}
+	article {
+		width: 100%;
+	}
+ 
+}
